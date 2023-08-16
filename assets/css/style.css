@@ -63,11 +63,17 @@ h6 {
   .justify-content-sm-space-between {
     justify-content: center;
   }
+  .justify-content-sm-space-around {
+    justify-content: space-around;
+  }
 }
 
 @media (min-width: 768px) {
   .justify-content-md-space-between {
     justify-content: space-between;
+  }
+  .justify-content-md-space-around {
+    justify-content: space-around;
   }
 }
 
@@ -166,6 +172,24 @@ h6 {
   z-index: 997;
   transition: all 0.5s;
   background: rgba(1, 4, 136, 0.9);
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    height: 60px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    background: rgba(1, 4, 136, 0.9);
+  }
+
+  #header .logo h1 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+    font-weight: 500;
+  }
 }
 
 #header.header-transparent {
@@ -459,8 +483,10 @@ h6 {
   width: 100%;
   /* background: url("../img/hero-bg.jpg"); */
   position: relative;
-  /* padding: 120px 0 0 0; */
+  padding: 0 0 0 0;
   min-height: 50vh;
+  text-align: center;
+  max-height: 100vh;
 }
 
 /* #hero:before {
@@ -521,7 +547,8 @@ h6 {
 
 @media (max-width: 991px) {
   #hero {
-    padding-top: 80px;
+    padding-top: 60px;
+    min-height: 30vh;
   }
 
   #hero .animated {
@@ -537,13 +564,13 @@ h6 {
   }
 
   #hero h1 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 25px;
     margin-bottom: 10px;
   }
 
   #hero h2 {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     margin-bottom: 30px;
   }
@@ -1538,6 +1565,7 @@ section {
   background: url("../img/Contact-Us.gif");
   position: relative;
   padding: 120px 0 0 0;
+  min-width: 40vh;
 }
 
 #contactbanner:before {
@@ -1998,6 +2026,14 @@ section {
 .bg-glass {
   background-color: hsla(0, 0%, 100%, 0.9) !important;
   backdrop-filter: saturate(200%) blur(25px);
+}
+
+/* Add a custom CSS class for the captcha container */
+.captcha-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100px; /* Adjust the height as needed */
 }
 
 /*--------------------------------
